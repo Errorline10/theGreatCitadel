@@ -1,6 +1,6 @@
 # The Codex
 
-Repository archive for **The Codex of The Living Mind Palace**.
+Repository archive for **The Codex of The Great Citadel**.
 
 This repository stores complete standalone Codex versions. Each version is a full copy of the Codex at that point in time, not a patch file.
 
