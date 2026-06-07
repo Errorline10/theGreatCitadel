@@ -48,9 +48,11 @@ After loading, report initialization status and list the active file paths.
 
 This repository stores complete standalone Codex versions. Each version is a full copy of the Codex at that point in time, not a patch file.
 
-## Current Canonical Version
+## Current ChatGPT Codex Release
 
-- `MAIN/Codex_v1.0_Discovery_Edition.md`
+- Version: `v2.9`
+- Bootstrap: `chatGPT/sessionRules/Codex_v2.9_Bootstrap.md`
+- Required release manifest is defined in the active bootstrap file.
 
 ## Versioning Rules
 
@@ -58,6 +60,9 @@ This repository stores complete standalone Codex versions. Each version is a ful
 - No version depends on another version to be understood.
 - Branches may be used for experimental work.
 - Only approved full copies are promoted into the MAIN archive.
+- When a new Codex version is saved to GitHub, the README must be updated in the same save workflow.
+- The README bootstrap file path, recommended bootstrap prompt, and Current ChatGPT Codex Release section must all reference the new version number.
+- A GitHub Codex save is incomplete if the required Codex files are published but the README still points to the previous active ChatGPT Codex release.
 
 ## Current World Name
 
