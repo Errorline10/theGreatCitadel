@@ -159,6 +159,12 @@ Do not save only one file unless the user explicitly asks for a repair or partia
 
 GitHub saves require explicit user request, version increment, and successful publication of all required files.
 
+Every GitHub Codex save must also update the root README.md in the same save workflow.
+
+The README update must include the new active version number, the new bootstrap file path, and the recommended bootstrap prompt updated to reference the new version.
+
+A GitHub Codex save is incomplete if README.md still points to the previous active ChatGPT Codex release after the new release files are published.
+
 ---
 
 # Version Matching Rule
@@ -168,6 +174,8 @@ All files in a published release must share the same version number.
 A version mismatch is non-canonical and must be reported.
 
 Initialization is not complete until required files are loaded and version compatibility is confirmed.
+
+The README active release reference must match the latest published ChatGPT Codex release after each successful GitHub save.
 
 ---
 
@@ -193,6 +201,7 @@ Major changes:
 - Defines room blueprint reference images.
 - Defines door-render continuity images.
 - Defines GitHub image retrieval and verification rules.
+- Requires README.md active release references to be updated during future GitHub Codex saves.
 - Preserves v2.8 Garden direct-adjacency and topology-separation discipline.
 
 End of Codex v2.9 — Bootstrap.
