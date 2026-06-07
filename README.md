@@ -10,7 +10,7 @@ Repository:
 `Errorline10/theGreatCitadel`
 
 Bootstrap file:
-`chatGPT/sessionRules/Codex_v2.9_Bootstrap.md`
+`chatGPT/sessionRules/Codex_v3.0_Bootstrap.md`
 
 Recommended bootstrap prompt:
 
@@ -23,19 +23,20 @@ Repository:
 Errorline10/theGreatCitadel
 
 Load this bootstrap file first:
-chatGPT/sessionRules/Codex_v2.9_Bootstrap.md
+chatGPT/sessionRules/Codex_v3.0_Bootstrap.md
 
 Then follow the bootstrap manifest exactly. Fetch every required file by exact GitHub path.
 
 After fetching, verify:
 1. Each required file was actually retrieved.
-2. Each file says Version: v2.9.
+2. Each file says Version: v3.0.
 3. The Room Index is loaded from roomVault, not codexVault.
 4. Room Render Definitions are loaded from roomVault.
 5. Render Continuity Rules are loaded from renderVault.
 6. Image Reference Index is loaded from referenceVault.
-7. All rules, protocols, definitions, checklists, canonical constraints, render continuity rules, and image reference retrieval rules are activated.
-8. Future Citadel requests are bound to the active v2.9 Codex.
+7. Exterior Index is loaded from exteriorVault.
+8. All rules, protocols, definitions, checklists, canonical constraints, render continuity rules, exterior rules, and image reference retrieval rules are activated.
+9. Future Citadel requests are bound to the active v3.0 Codex.
 
 Do not claim loaded, initialized, or activated unless the GitHub connector successfully fetched the files.
 
@@ -50,8 +51,8 @@ This repository stores complete standalone Codex versions. Each version is a ful
 
 ## Current ChatGPT Codex Release
 
-- Version: `v2.9`
-- Bootstrap: `chatGPT/sessionRules/Codex_v2.9_Bootstrap.md`
+- Version: `v3.0`
+- Bootstrap: `chatGPT/sessionRules/Codex_v3.0_Bootstrap.md`
 - Required release manifest is defined in the active bootstrap file.
 
 ## Versioning Rules
