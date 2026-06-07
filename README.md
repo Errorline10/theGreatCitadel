@@ -10,7 +10,7 @@ Repository:
 `Errorline10/theGreatCitadel`
 
 Bootstrap file:
-`chatGPT/sessionRules/Codex_v3.1_Bootstrap.md`
+`chatGPT/sessionRules/Codex_v3.2_Bootstrap.md`
 
 Recommended bootstrap prompt:
 
@@ -23,21 +23,26 @@ Repository:
 Errorline10/theGreatCitadel
 
 Load this bootstrap file first:
-chatGPT/sessionRules/Codex_v3.1_Bootstrap.md
+chatGPT/sessionRules/Codex_v3.2_Bootstrap.md
 
 Then follow the bootstrap manifest exactly. Fetch every required file by exact GitHub path.
 
 After fetching, verify:
 1. Each required file was actually retrieved.
-2. Each file says Version: v3.1.
+2. Each file says Version: v3.2.
 3. The Room Index is loaded from roomVault, not codexVault.
 4. Room Render Definitions are loaded from roomVault.
 5. Render Continuity Rules are loaded from renderVault.
 6. Image Reference Index is loaded from referenceVault.
 7. Exterior Index is loaded from exteriorVault.
 8. The 360 Panorama Compass Normalization Rule is active.
-9. All rules, protocols, definitions, checklists, canonical constraints, render continuity rules, exterior rules, and image reference retrieval rules are activated.
-10. Future Citadel requests are bound to the active v3.1 Codex.
+9. The Citadel Render Request Intercept Rule is active.
+10. All pre-render and post-render rules apply to 360 image generation.
+11. The No Overlay / No Text Rule is active.
+12. The Viewer Position and Orientation Rule is active.
+13. The Canonical Door Count Preservation Rule is active.
+14. All rules, protocols, definitions, checklists, canonical constraints, render continuity rules, exterior rules, and image reference handling rules are activated.
+15. Future Citadel requests are bound to the active v3.2 Codex.
 
 Do not claim loaded, initialized, or activated unless the GitHub connector successfully fetched the files.
 
@@ -52,8 +57,8 @@ This repository stores complete standalone Codex versions. Each version is a ful
 
 ## Current ChatGPT Codex Release
 
-- Version: `v3.1`
-- Bootstrap: `chatGPT/sessionRules/Codex_v3.1_Bootstrap.md`
+- Version: `v3.2`
+- Bootstrap: `chatGPT/sessionRules/Codex_v3.2_Bootstrap.md`
 - Required release manifest is defined in the active bootstrap file.
 
 ## Versioning Rules
