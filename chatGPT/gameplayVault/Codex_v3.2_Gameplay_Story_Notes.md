@@ -31,6 +31,7 @@ It is intended to track:
 - protected knowledge areas
 - inventory UI rules
 - real-world content mappings
+- possible new rooms explicitly approved by the user
 
 ---
 
@@ -503,6 +504,28 @@ Reject and regenerate if any of the following occur:
 
 ---
 
+# Possible New Rooms Registry
+
+This registry tracks possible future rooms that the user has explicitly approved for consideration.
+
+## Registry Rule
+
+Only add rooms to this section when the user explicitly says they want that room added.
+
+Do not add brainstormed, inferred, suggested, or assistant-proposed rooms unless the user explicitly approves them.
+
+Rooms listed here are proposed gameplay/story rooms only. They are not canonical Room Index entries until promoted through a future Codex update.
+
+## Approved Possible Rooms
+
+| Room Name | Real-World Representation | Gameplay Purpose | Status | Notes |
+|---|---|---|---|---|
+| Earth Room | Live Earth, weather, satellite imagery, maps, NOAA-style real-time atmospheric data | Explore current global conditions as a Citadel room/station | Proposed | May contain a large semi-globe wall projection showing current weather, satellite imagery, cloud systems, storms, and atmospheric layers. |
+| Media Vault | DVD/Blu-ray/Plex/Jellyfin/personal movie collection | Browse films spatially through a circular archive | Proposed | Circular wall vault with alphabetical scrolls or sheets, each representing one DVD/movie; cover art should be used as primary visual identity. |
+| Music Listening Room | Music collection, playlists, albums, streaming or local audio library | Listen to and browse music as a room-based experience | Proposed | May contain listening stations, album art, playlists, artist shelves, and audio playback interactions. |
+
+---
+
 # Story Notes
 
 ## Premise
@@ -647,6 +670,16 @@ To be defined.
 ---
 
 # Change Log
+
+## v3.2 Auxiliary Update — Possible New Rooms Registry
+
+Added controlled Possible New Rooms Registry.
+
+Approved possible rooms added:
+
+- Earth Room
+- Media Vault
+- Music Listening Room
 
 ## v3.2 Auxiliary Update — Gameplay Systems
 
