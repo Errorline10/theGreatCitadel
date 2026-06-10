@@ -1,13 +1,122 @@
 {
   "schema": {
     "name": "Citadel People Index",
-    "version": "v1.0",
+    "version": "v1.1",
     "purpose": "Personal memory aid for names, faces, relationships, context, and interaction history.",
-    "canonicalModel": "Face -> Context -> History"
+    "canonicalModel": "Face -> Context -> History",
+    "personRecordFields": [
+      "id",
+      "displayName",
+      "firstName",
+      "middleName",
+      "lastName",
+      "preferredName",
+      "pronunciation",
+      "photo",
+      "photoStatus",
+      "faceRecognitionNotes",
+      "relationshipCategory",
+      "relationshipStrength",
+      "organization",
+      "group",
+      "team",
+      "role",
+      "howIKnowThem",
+      "memoryHooks",
+      "personalContext",
+      "importantNotes",
+      "conversationHistory",
+      "relatedPeople",
+      "tags",
+      "sources",
+      "confidence",
+      "lastVerified",
+      "createdAt",
+      "updatedAt"
+    ],
+    "personalContextFields": {
+      "birthday": "Optional. Store only when intentionally provided or explicitly approved.",
+      "relationshipStatus": "Optional. Store only when intentionally provided or explicitly approved.",
+      "partner": {
+        "name": "Optional partner name.",
+        "notes": "Optional memory notes about partner."
+      },
+      "kids": "Optional array of child records with name and notes.",
+      "pets": "Optional array of pet records with name, type, and notes."
+    },
+    "notes": [
+      "The People Index data model should stay separate from Citadel visualization concepts such as wings.",
+      "Organization, group, and team are data fields; the UI may later decide how to visualize them.",
+      "Personal context fields are optional memory aids, not required identity fields."
+    ]
   },
-  "people": [],
-  "tags": [],
-  "groups": [],
+  "people": [
+    {
+      "id": "person_michael_boston",
+      "displayName": "Michael Boston",
+      "firstName": "Michael",
+      "middleName": "F",
+      "lastName": "Boston",
+      "preferredName": "Michael",
+      "pronunciation": "",
+      "photo": "",
+      "photoStatus": "missing-photo",
+      "faceRecognitionNotes": [],
+      "relationshipCategory": "self",
+      "relationshipStrength": 5,
+      "organization": "FGCU",
+      "group": "University Marketing",
+      "team": "",
+      "role": "",
+      "howIKnowThem": "Owner of the Citadel People Index.",
+      "memoryHooks": [
+        "Works at FGCU"
+      ],
+      "personalContext": {
+        "birthday": "",
+        "relationshipStatus": "",
+        "partner": {
+          "name": "",
+          "notes": ""
+        },
+        "kids": [],
+        "pets": []
+      },
+      "importantNotes": [],
+      "conversationHistory": [],
+      "relatedPeople": [],
+      "tags": [
+        "self",
+        "FGCU",
+        "University Marketing"
+      ],
+      "sources": [
+        {
+          "type": "user-entered",
+          "name": "ChatGPT People Index setup conversation",
+          "url": "",
+          "lastVerified": "2026-06-09"
+        }
+      ],
+      "confidence": "verified",
+      "lastVerified": "2026-06-09",
+      "createdAt": "2026-06-09",
+      "updatedAt": "2026-06-09"
+    }
+  ],
+  "tags": [
+    "self",
+    "FGCU",
+    "University Marketing"
+  ],
+  "groups": [
+    {
+      "id": "group_fgcu_university_marketing",
+      "organization": "FGCU",
+      "group": "University Marketing",
+      "description": "FGCU University Marketing coworkers and related contacts."
+    }
+  ],
   "sourceTypes": [
     "user-entered",
     "uploaded-photo",
@@ -32,6 +141,23 @@
     "uncertain-match",
     "default-avatar",
     "recently-updated"
+  ],
+  "relationshipStrengthScale": {
+    "1": "Know of them",
+    "2": "Occasional interaction",
+    "3": "Regular coworker or contact",
+    "4": "Frequent collaborator",
+    "5": "Very important relationship"
+  },
+  "importSources": [
+    {
+      "id": "source_fgcu_university_marketing_team_page",
+      "type": "public-directory",
+      "name": "FGCU University Marketing Team Page",
+      "url": "https://www.fgcu.edu/advancement/universitymarketing/team/",
+      "status": "approved-for-import",
+      "lastImported": ""
+    }
   ],
   "lastUpdated": "2026-06-09"
 }
