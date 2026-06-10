@@ -1,0 +1,36 @@
+{
+  "importName": "FGCU University Marketing Coworkers",
+  "importDate": "2026-06-09",
+  "source": {
+    "type": "public-directory",
+    "name": "FGCU University Marketing Team Page",
+    "url": "https://www.fgcu.edu/advancement/universitymarketing/team/"
+  },
+  "relationshipCategory": "work",
+  "defaultRelationshipStrength": 1,
+  "organization": "FGCU",
+  "group": "University Marketing",
+  "people": [
+    {"name":"Larry Bender","role":"Associate Vice President, Marketing & Communications","email":"lbender@fgcu.edu","phone":"239-590-1089","photoStatus":"verified-photo"},
+    {"name":"Dave Anderson","role":"Assoc Director, Mktg and Comm","email":"daanderson@fgcu.edu","phone":"239-590-7092","location":"MOD3 0106","photoStatus":"default-avatar"},
+    {"name":"Laurie Babcock","role":"Writer II","email":"lbabcock@fgcu.edu","phone":"239-590-7093","location":"MOD3 0112","photoStatus":"default-avatar"},
+    {"name":"Cadence Bakker","role":"Social Media Specialist I","email":"cbakker@fgcu.edu","phone":"239-590-7036","location":"MOD3 0119","photoStatus":"default-avatar"},
+    {"name":"Michael Boston","role":"Web Developer","email":"mboston@fgcu.edu","photoStatus":"missing-photo"},
+    {"name":"Molly Capiga","role":"Assistant Director, Media & Public Relations","email":"mcapiga@fgcu.edu","phone":"239-745-4627","photoStatus":"default-avatar"},
+    {"name":"Tea Capuni","role":"Marketing Manager","email":"tcapuni@fgcu.edu","phone":"239-590-4285","location":"MOD3 0132","photoStatus":"default-avatar"},
+    {"name":"Timothy Clark","role":"Assistant Director, Multimedia","email":"tclark@fgcu.edu","phone":"239-590-7397","location":"MOD3 0126","photoStatus":"default-avatar"},
+    {"name":"Katie Cribbs","role":"Assistant Vice President of Communications","email":"kcribbs@fgcu.edu","phone":"239-745-4602","location":"MOD3 0120","photoStatus":"default-avatar"},
+    {"name":"James Greco","role":"Photography Lead","email":"jgreco@fgcu.edu","phone":"239-745-4432","location":"MOD3 0108","photoStatus":"default-avatar"},
+    {"name":"Elizabeth Hodges Freihoefer","role":"Senior Director, Marketing & Brand Strategy","email":"ehodgesfreihoefer@fgcu.edu","photoStatus":"default-avatar"},
+    {"name":"Kirsten Jacobs","role":"Digital Signage Content Manager","email":"kijacobs@fgcu.edu","phone":"239-590-7243","photoStatus":"default-avatar"},
+    {"name":"Kristen Lingebach","role":"Senior Graphic Designer","email":"klingebach@fgcu.edu","photoStatus":"default-avatar"},
+    {"name":"Angelica Martinez","role":"Digital/Web Designer","email":"mmartinez@fgcu.edu","phone":"239-590-7079","location":"MOD3 0108","photoStatus":"default-avatar"},
+    {"name":"Chelsea Morton","role":"Business Manager I","email":"cmorton@fgcu.edu","phone":"239-590-1081","photoStatus":"default-avatar"},
+    {"name":"Christopher Noonan","role":"Videographer II","email":"cnoonan@fgcu.edu","phone":"239-590-1428","location":"MOD3 0116","photoStatus":"default-avatar"},
+    {"name":"Jeffrey Noy","role":"Webmaster","email":"jnoy@fgcu.edu","phone":"239-590-1193","location":"MOD3 0146","photoStatus":"default-avatar"},
+    {"name":"Mike Rechkemmer","role":"University Website Manager","email":"mrechkemmer@fgcu.edu","phone":"239-745-4435","location":"MOD3 0144","photoStatus":"default-avatar"},
+    {"name":"Kathryn Robinson Kinsey","role":"Strategic Projects Manager","email":"krobinsonkinsey@fgcu.edu","phone":"239-745-4242","photoStatus":"default-avatar"},
+    {"name":"Rob Salazar","role":"Videographer II","email":"rlsalazar@fgcu.edu","location":"MOD3 0116","photoStatus":"default-avatar"},
+    {"name":"Drew Sterwald","role":"Assistant Director, Marketing & Communication","email":"asterwald@fgcu.edu","phone":"239-590-1082","location":"MOD3 0112","photoStatus":"default-avatar"}
+  ]
+}
