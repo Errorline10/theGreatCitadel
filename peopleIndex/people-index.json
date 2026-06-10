@@ -70,7 +70,8 @@
       "role": "",
       "howIKnowThem": "Owner of the Citadel People Index.",
       "memoryHooks": [
-        "Works at FGCU"
+        "Works at FGCU",
+        "Mike Rechkemmer is my boss"
       ],
       "personalContext": {
         "birthday": "",
@@ -84,7 +85,13 @@
       },
       "importantNotes": [],
       "conversationHistory": [],
-      "relatedPeople": [],
+      "relatedPeople": [
+        {
+          "personId": "person_mike_rechkemmer",
+          "relationship": "boss",
+          "notes": "Mike R is Michael Boston's boss."
+        }
+      ],
       "tags": [
         "self",
         "FGCU",
@@ -102,12 +109,81 @@
       "lastVerified": "2026-06-09",
       "createdAt": "2026-06-09",
       "updatedAt": "2026-06-09"
+    },
+    {
+      "id": "person_mike_rechkemmer",
+      "displayName": "Mike Rechkemmer",
+      "firstName": "Mike",
+      "middleName": "",
+      "lastName": "Rechkemmer",
+      "preferredName": "Mike R",
+      "pronunciation": "",
+      "photo": "",
+      "photoStatus": "default-avatar",
+      "faceRecognitionNotes": [],
+      "relationshipCategory": "work",
+      "relationshipStrength": 4,
+      "organization": "FGCU",
+      "group": "University Marketing",
+      "team": "",
+      "role": "University Website Manager",
+      "howIKnowThem": "Michael Boston's boss at FGCU University Marketing.",
+      "memoryHooks": [
+        "Mike R",
+        "My boss",
+        "University Website Manager"
+      ],
+      "personalContext": {
+        "birthday": "",
+        "relationshipStatus": "",
+        "partner": {
+          "name": "",
+          "notes": ""
+        },
+        "kids": [],
+        "pets": []
+      },
+      "importantNotes": [],
+      "conversationHistory": [],
+      "relatedPeople": [
+        {
+          "personId": "person_michael_boston",
+          "relationship": "direct report",
+          "notes": "Michael Boston reports to Mike Rechkemmer."
+        }
+      ],
+      "tags": [
+        "FGCU",
+        "University Marketing",
+        "boss",
+        "coworker"
+      ],
+      "sources": [
+        {
+          "type": "public-directory",
+          "name": "FGCU University Marketing Team Page",
+          "url": "https://www.fgcu.edu/advancement/universitymarketing/team/",
+          "lastVerified": "2026-06-09"
+        },
+        {
+          "type": "user-entered",
+          "name": "User stated Mike R is my boss",
+          "url": "",
+          "lastVerified": "2026-06-09"
+        }
+      ],
+      "confidence": "verified",
+      "lastVerified": "2026-06-09",
+      "createdAt": "2026-06-09",
+      "updatedAt": "2026-06-09"
     }
   ],
   "tags": [
     "self",
     "FGCU",
-    "University Marketing"
+    "University Marketing",
+    "boss",
+    "coworker"
   ],
   "groups": [
     {
@@ -156,7 +232,7 @@
       "name": "FGCU University Marketing Team Page",
       "url": "https://www.fgcu.edu/advancement/universitymarketing/team/",
       "status": "approved-for-import",
-      "lastImported": ""
+      "lastImported": "2026-06-09"
     }
   ],
   "lastUpdated": "2026-06-09"
