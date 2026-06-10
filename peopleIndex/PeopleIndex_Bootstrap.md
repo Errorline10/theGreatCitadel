@@ -2,7 +2,7 @@
 
 Project: The Great Citadel
 Vault: People Index
-Version: v1.0
+Version: v1.1
 Role: Bootstrap instructions for maintaining the Citadel People Index in a dedicated ChatGPT window.
 
 ---
@@ -30,14 +30,52 @@ The system should help answer:
 - /peopleIndex/PeopleIndex_Bootstrap.md
 - /peopleIndex/people-index.json
 - /peopleIndex/images/
+- /peopleIndex/imports/
 
 ---
 
 # Source of Truth Rule
 
-The JSON file at `/peopleIndex/people-index.json` is the source of truth for all People Index records.
+The JSON file at `/peopleIndex/people-index.json` is the source of truth for committed People Index records.
 
-Do not treat chat memory, assumptions, or unsaved discussion as canonical until the JSON file has been updated.
+However, during a live People Index chat, the assistant may maintain a local working version of new facts and schema decisions before they are committed to GitHub.
+
+Do not treat chat memory, assumptions, or unsaved discussion as globally canonical until the JSON file has been updated in GitHub.
+
+---
+
+# Local Working Version Rule
+
+When the user provides new People Index information, add it to the local working version for the active chat.
+
+The local working version may contain:
+
+- New person facts
+- Relationship updates
+- Memory hooks
+- Naming preferences
+- Schema adjustments
+- Import decisions
+- Notes awaiting review
+
+The assistant should clearly treat these as local working notes until the user asks for a GitHub save.
+
+---
+
+# GitHub Save Rule
+
+Do not update GitHub automatically after every new fact.
+
+Only write People Index changes to GitHub when the user explicitly asks for a GitHub save using wording such as:
+
+- "save to github"
+- "save this to github"
+- "commit this to github"
+- "push the people index updates"
+
+If the user says only "save this," treat it as a local working save in the active chat, not a GitHub commit.
+
+After a GitHub save, summarize the committed changes and confirm the target file or files updated.
 
 ---
 
@@ -59,6 +97,9 @@ Do not treat chat memory, assumptions, or unsaved discussion as canonical until 
 Each person should use a stable unique id and may include:
 
 - id
+- formalName
+- knownAs
+- nicknames
 - displayName
 - firstName
 - middleName
@@ -67,11 +108,16 @@ Each person should use a stable unique id and may include:
 - pronunciation
 - photo
 - photoStatus
+- faceRecognitionNotes
 - relationshipCategory
+- relationshipStrength
 - organization
+- group
+- team
 - role
 - howIKnowThem
 - memoryHooks
+- personalContext
 - importantNotes
 - conversationHistory
 - relatedPeople
@@ -81,6 +127,48 @@ Each person should use a stable unique id and may include:
 - lastVerified
 - createdAt
 - updatedAt
+
+---
+
+# Naming Model
+
+Use the following naming model where possible:
+
+```json
+{
+  "formalName": "",
+  "knownAs": "",
+  "nicknames": []
+}
+```
+
+Rules:
+
+1. `formalName` is the full or formal name.
+2. `knownAs` is what the user normally calls the person.
+3. `nicknames` stores alternate names useful for search and recall.
+4. `displayName` may follow `knownAs` when present, otherwise `formalName`.
+
+---
+
+# Personal Context Fields
+
+Optional personal memory fields may include:
+
+```json
+{
+  "birthday": "",
+  "relationshipStatus": "",
+  "partner": {
+    "name": "",
+    "notes": ""
+  },
+  "kids": [],
+  "pets": []
+}
+```
+
+Store these only when intentionally provided or explicitly approved by the user.
 
 ---
 
@@ -101,6 +189,8 @@ People should be discoverable by:
 
 - Face
 - Name
+- Known-as name
+- Nickname
 - Organization
 - Relationship category
 - Tags
@@ -134,22 +224,27 @@ When the user asks to add or update a person:
 
 1. Capture the provided facts.
 2. Do not invent missing facts.
-3. Create or update the person record in `people-index.json`.
+3. Add the change to the local working version first.
 4. Preserve existing information unless the user clearly replaces it.
-5. Update `updatedAt` and `lastVerified` where appropriate.
-6. Keep the JSON valid and consistently formatted.
-7. Summarize what changed after saving.
+5. Update `updatedAt` and `lastVerified` when committing to GitHub.
+6. Keep JSON valid and consistently formatted when writing to files.
+7. Summarize what changed after local updates and after GitHub commits.
 
 ---
 
-# Save Command Rule
+# Import Protocol
 
-When the user says "save this" in a People Index chat, update `/peopleIndex/people-index.json` with the facts currently agreed upon.
+When importing from an approved public organization source:
 
-If the update is conceptual rather than about a specific person, ask whether it belongs in the People Index bootstrap, gameplay vault, or another Citadel vault.
+1. Import only public professional fields unless the user explicitly adds personal context.
+2. Keep source URL, import date, and confidence status.
+3. Do not overwrite user-entered personal notes during future imports.
+4. If imported records are not yet full person records, keep them in `/peopleIndex/imports/` until promoted.
 
 ---
 
 # Non-Canonical Working Notes
 
-A chat may discuss possible structures, fields, and features. These are not canonical until saved into the appropriate GitHub file.
+A chat may discuss possible structures, fields, and features. These are not globally canonical until saved into the appropriate GitHub file.
+
+Local working notes are useful during the active chat, but GitHub remains the durable repository source of truth after explicit commit.
