@@ -1,0 +1,37 @@
+{
+  "schema": {
+    "name": "Citadel People Index",
+    "version": "v1.0",
+    "purpose": "Personal memory aid for names, faces, relationships, context, and interaction history.",
+    "canonicalModel": "Face -> Context -> History"
+  },
+  "people": [],
+  "tags": [],
+  "groups": [],
+  "sourceTypes": [
+    "user-entered",
+    "uploaded-photo",
+    "public-directory",
+    "email",
+    "calendar",
+    "contact-card",
+    "inferred"
+  ],
+  "confidenceLevels": [
+    "verified",
+    "high",
+    "medium",
+    "low",
+    "stale",
+    "unknown"
+  ],
+  "photoStatuses": [
+    "verified-photo",
+    "missing-photo",
+    "old-photo",
+    "uncertain-match",
+    "default-avatar",
+    "recently-updated"
+  ],
+  "lastUpdated": "2026-06-09"
+}
